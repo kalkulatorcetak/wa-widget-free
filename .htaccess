@@ -1,0 +1,46 @@
+############### SET Rewrite ON ##################
+<ifmodule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(.*)/$
+
+RewriteRule ^([^/.]+)/?$ setup.php [L]
+
+</ifmodule>
+############### SET Keep-Alive ##################
+<ifModule mod_headers.c>
+#Header set Connection keep-alive
+ Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"	
+ Header set Pragma "no-cache" 	
+ Header set Expires 0 
+</ifModule>
+
+<FilesMatch "\.(css|flv|gif|htm|html|ico|jpe|jpeg|jpg|js|png|pdf|swf|txt)$">
+	<IfModule mod_expires.c>
+		ExpiresActive Off
+	</IfModule>
+	<IfModule mod_headers.c>
+		FileETag None
+		Header unset ETag
+		Header unset Pragma
+		Header unset Cache-Control
+		Header unset Last-Modified
+		Header set Pragma "no-cache"
+		Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+		Header set Expires "Mon, 10 Apr 1972 00:00:00 GMT"
+	</IfModule>
+</FilesMatch>
+
+IndexIgnore *
+Options -Indexes
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php56___lsphp .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+ # DISABLE CACHING 

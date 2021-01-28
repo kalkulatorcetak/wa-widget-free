@@ -1,0 +1,34 @@
+{
+	"widget": {
+		"url": "widgetfree.go",
+		"title": "Butuh bantuan? Chat kami!",
+		"desc": "Kami di sini untuk membantu Anda! Jangan ragu untuk bertanya kepada kami apa pun. Klik di bawah untuk memulai obrolan.",
+		"newtab": "1",
+		"style": "1",
+		"styletitle": "",
+		"position": "right",
+		"icon": "1",
+		"responsive": "1",
+		"zindex": "999",
+		"mode": "2",
+		"show": "1",
+		"autolabel": "1",
+		"auto": "",
+		"autoscroll": "",
+		"automobile": "",
+		"color": "#81d742",
+        		"xgen": [{
+        		"agent": [{
+    				"name": "Munajat Ibnu",
+    				"number": "6289611274798",
+    				"photo": "https://www.sayuti.com/themes/default/img/clients/dede_m.png",
+    				"desc": "Siap membantu Anda tentang produk percetakan :)",
+    				"role": "Front Office Support",
+    				"message": "Assalamualaikum! Ada yang bisa saya bantu?",
+					"link_url": "",
+    				"link_image": "",
+    				"link_text": ""
+						}]
+			}]
+	}
+}
